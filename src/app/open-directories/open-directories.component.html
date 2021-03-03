@@ -1,0 +1,28 @@
+<div class="main" style="margin-top: 2%;">
+    <p class="mat-h2">
+        Find media in exposed directories
+    </p>
+
+    <mat-form-field>
+        <mat-label>Search term</mat-label>
+        <input matInput placeholder="Ex. Ready player one" id="term">
+    </mat-form-field>
+    <br>
+    
+    <mat-form-field>
+    <mat-label>Filetype</mat-label>
+        <mat-select name="fileType" id="fileType">
+            <mat-option value="">Any</mat-option>
+            <mat-option value="%2B(.mkv|.mp4|.avi|.mov|.mpg|.wmv)">Video</mat-option>
+            <mat-option value="%2B(.ogg|.mp3|.flac|.wma|.m4a)">Music</mat-option>
+            <mat-option value="%2B(.sql|.cql)">Database (sql)</mat-option>
+            <mat-option value=".torrent">Torrent</mat-option>
+            <mat-option value=".torrent">eBook</mat-option>
+            <mat-option value=".torrent">Picture</mat-option>
+            <mat-option value=".torrent">Archive</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <br>
+    <button style="text-align: center;" type="submit" mat-stroked-button (click)="search()" color="primary">Let's go!</button>
+<div>
